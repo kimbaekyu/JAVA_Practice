@@ -1,0 +1,79 @@
+import java.util.Scanner;
+public class arr_tictactoe {
+
+
+    public static void main(String[] args){
+        char[][] array=new char[3][3];
+        Scanner scanner=new Scanner(System.in);
+        int x,y,cnt=0;
+
+        System.out.println("Tic Tac Toe GAME");
+        //배열 초기화
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++)
+            array[i][j]=' ';
+        }
+        //입력
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                if(cnt%2==0){
+                    System.out.print("선공(O)차례입니다. ");
+                    x=scanner.nextInt();
+                    y=scanner.nextInt();
+                    if(array[x][y]!=' '){
+                        System.out.println("다른 자리를 선택해주세요.");
+                           cnt-=1;j-=1;
+                    }
+                    else
+                           array[x][y]='o';
+
+                }
+
+                else{
+                    System.out.print("후공(X)차례입니다. ");
+                    x=scanner.nextInt();
+                    y=scanner.nextInt();
+                    if(array[x][y]!=' '){
+                        System.out.println("다른 자리를 선택해주세요.");
+                        cnt-=1;j-=1;
+                    }
+                    else
+                        array[x][y]='x';
+
+                }
+            cnt++;
+            }
+        }
+
+
+        //출력부분
+        System.out.printf("%n");
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                if(j%3==0)
+                    System.out.printf("%n-----------%n");
+                System.out.printf("%c |\t",array[i][j]);
+            }
+
+        }
+        //검사부분
+        //가로
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                if(array[i][j]=='o')
+                    break;
+            }
+        }
+        //세로
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                if(array[j][i]=='o')
+                    break;
+            }
+        }
+    }
+
+
+
+}
+
