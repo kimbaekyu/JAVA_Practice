@@ -69,8 +69,132 @@ public class arr_tictactoe {
 
                             }
                             System.out.printf("\n");
+
                         }
-                        System.out.printf("\n");
+                        System.out.printf("%n");
+                        //검사부분
+                        //가로
+                        for(int i=0;i<3;i++){
+                            xArr1[i]=array[0][i];
+                            xArr2[i]=array[1][i];
+                            xArr3[i]=array[2][i];
+                        }
+                        //세로
+                        for(int i=0;i<3;i++){
+                            yArr1[i]=array[i][0];
+                            yArr2[i]=array[i][1];
+                            yArr3[i]=array[i][2];
+                        }
+                        //대각선
+                        for(int i=0;i<3;i++){
+                            dArr1[i]=array[i][i];
+                            dArr2[i]=array[i][2-i];
+                        }
+                        //검사: 저장된 값과 비교
+                        //가로 검사
+
+
+                        for(int i=0;i<2;i++){
+                            String tmp=xArr1[i];
+                            if(tmp==xArr1[i+1]){
+                                xcheck1=true;
+                            }
+                            else{
+                                xcheck1=false;
+                                break;
+                            }
+                        }
+                        System.out.println("xArr1:"+xcheck1);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=xArr2[i];
+                            if(tmp==xArr2[i+1]){
+                                xcheck2=true;
+                            }
+                            else{
+                                xcheck2=false;
+                                break;}
+                        }
+                        System.out.println("xArr2:"+xcheck2);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=xArr3[i];
+                            if(tmp==xArr3[i+1]){
+                                xcheck3=true;
+                            }
+                            else{
+                                xcheck3=false;
+                                break;}
+                        }
+                        System.out.println("xArr3:"+xcheck3);
+
+                        //세로 검사
+
+
+                        for(int i=0;i<2;i++){
+                            String tmp=yArr1[i];
+                            if(tmp==yArr1[i+1]){
+                                ycheck1=true;
+                            }
+                            else{
+                                ycheck1=false;
+                                break;
+                            }
+                        }
+                        System.out.println("yArr1:"+ycheck1);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=yArr2[i];
+                            if(tmp==yArr2[i+1]){
+                                ycheck2=true;
+                            }
+                            else{
+                                ycheck2=false;
+                                break;
+                            }
+                        }
+                        System.out.println("yArr2:"+ycheck2);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=yArr3[i];
+                            if(tmp==yArr3[i+1]){
+                                ycheck3=true;
+                            }
+                            else{
+                                ycheck3=false;
+                                break;
+                            }
+                        }
+                        System.out.println("yArr3:"+ycheck3);
+
+                        //대각선 검사
+                        for(int i=0;i<2;i++){
+                            String tmp=dArr1[i];
+                            if(tmp==dArr1[i+1]){
+                                dcheck1=true;
+                            }
+                            else{
+                                dcheck1=false;
+                                break;
+                            }
+                        }
+                        System.out.println("dArr1:"+dcheck1);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=dArr2[i];
+                            if(tmp==dArr2[i+1]){
+                                dcheck2=true;
+                            }
+                            else{
+                                dcheck2=false;
+                                break;
+                            }
+                        }
+                        System.out.println("dArr2:"+dcheck2);
+
+                        if(xcheck1||xcheck2||xcheck3||ycheck1||ycheck2||ycheck3||dcheck1||dcheck2==true){
+                            break;
+                        }
                     }
 
                     else {
@@ -97,135 +221,136 @@ public class arr_tictactoe {
                             System.out.printf("\n");
                         }
                         System.out.printf("\n");
+                        //검사부분
+                        //가로
+                        for(int i=0;i<3;i++){
+                            xArr1[i]=array[0][i];
+                            xArr2[i]=array[1][i];
+                            xArr3[i]=array[2][i];
+                        }
+                        //세로
+                        for(int i=0;i<3;i++){
+                            yArr1[i]=array[i][0];
+                            yArr2[i]=array[i][1];
+                            yArr3[i]=array[i][2];
+                        }
+                        //대각선
+                        for(int i=0;i<3;i++){
+                            dArr1[i]=array[i][i];
+                            dArr2[i]=array[i][2-i];
+                        }
+                        //검사: 저장된 값과 비교
+                        //가로 검사
+
+
+                        for(int i=0;i<2;i++){
+                            String tmp=xArr1[i];
+                            if(tmp==xArr1[i+1]){
+                                xcheck1=true;
+                            }
+                            else{
+                                xcheck1=false;
+                                break;
+                            }
+                        }
+                        System.out.println("xArr1:"+xcheck1);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=xArr2[i];
+                            if(tmp==xArr2[i+1]){
+                                xcheck2=true;
+                            }
+                            else{
+                                xcheck2=false;
+                                break;}
+                        }
+                        System.out.println("xArr2:"+xcheck2);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=xArr3[i];
+                            if(tmp==xArr3[i+1]){
+                                xcheck3=true;
+                            }
+                            else{
+                                xcheck3=false;
+                                break;}
+                        }
+                        System.out.println("xArr3:"+xcheck3);
+
+                        //세로 검사
+
+
+                        for(int i=0;i<2;i++){
+                            String tmp=yArr1[i];
+                            if(tmp==yArr1[i+1]){
+                                ycheck1=true;
+                            }
+                            else{
+                                ycheck1=false;
+                                break;
+                            }
+                        }
+                        System.out.println("yArr1:"+ycheck1);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=yArr2[i];
+                            if(tmp==yArr2[i+1]){
+                                ycheck2=true;
+                            }
+                            else{
+                                ycheck2=false;
+                                break;
+                            }
+                        }
+                        System.out.println("yArr2:"+ycheck2);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=yArr3[i];
+                            if(tmp==yArr3[i+1]){
+                                ycheck3=true;
+                            }
+                            else{
+                                ycheck3=false;
+                                break;
+                            }
+                        }
+                        System.out.println("yArr3:"+ycheck3);
+
+                        //대각선 검사
+                        for(int i=0;i<2;i++){
+                            String tmp=dArr1[i];
+                            if(tmp==dArr1[i+1]){
+                                dcheck1=true;
+                            }
+                            else{
+                                dcheck1=false;
+                                break;
+                            }
+                        }
+                        System.out.println("dArr1:"+dcheck1);
+
+                        for(int i=0;i<2;i++){
+                            String tmp=dArr2[i];
+                            if(tmp==dArr2[i+1]){
+                                dcheck2=true;
+                            }
+                            else{
+                                dcheck2=false;
+                                break;
+                            }
+                        }
+                        System.out.println("dArr2:"+dcheck2);
+
+                        if(xcheck1||xcheck2||xcheck3||ycheck1||ycheck2||ycheck3||dcheck1||dcheck2==true){
+                            break;
+                        }
                     }
 
 
 
 
         }
-        //검사부분
-        //가로
-        for(int i=0;i<3;i++){
-            xArr1[i]=array[0][i];
-            xArr2[i]=array[1][i];
-            xArr3[i]=array[2][i];
-        }
-        //세로
-        for(int i=0;i<3;i++){
-            yArr1[i]=array[i][0];
-            yArr2[i]=array[i][1];
-            yArr3[i]=array[i][2];
-        }
-        //대각선
-        for(int i=0;i<3;i++){
-            dArr1[i]=array[i][i];
-            dArr2[i]=array[i][2-i];
-        }
-        //검사: 저장된 값과 비교
-        //가로 검사
 
-
-        for(int i=0;i<2;i++){
-            String tmp=xArr1[i];
-            if(tmp==xArr1[i+1]){
-                xcheck1=true;
-            }
-            else{
-                xcheck1=false;
-                break;
-            }
-        }
-        System.out.println("xArr1:"+xcheck1);
-
-        for(int i=0;i<2;i++){
-            String tmp=xArr2[i];
-            if(tmp==xArr2[i+1]){
-                xcheck2=true;
-            }
-            else{
-                xcheck2=false;
-                break;}
-        }
-        System.out.println("xArr2:"+xcheck2);
-
-        for(int i=0;i<2;i++){
-            String tmp=xArr3[i];
-            if(tmp==xArr3[i+1]){
-                xcheck3=true;
-            }
-            else{
-                xcheck3=false;
-                break;}
-        }
-        System.out.println("xArr3:"+xcheck3);
-
-        //세로 검사
-
-
-        for(int i=0;i<2;i++){
-            String tmp=yArr1[i];
-            if(tmp==yArr1[i+1]){
-                ycheck1=true;
-            }
-            else{
-                ycheck1=false;
-                break;
-            }
-        }
-        System.out.println("yArr1:"+ycheck1);
-
-        for(int i=0;i<2;i++){
-            String tmp=yArr2[i];
-            if(tmp==yArr2[i+1]){
-                ycheck2=true;
-            }
-            else{
-                ycheck2=false;
-                break;
-            }
-        }
-        System.out.println("yArr2:"+ycheck2);
-
-        for(int i=0;i<2;i++){
-            String tmp=yArr3[i];
-            if(tmp==yArr3[i+1]){
-                ycheck3=true;
-            }
-            else{
-                ycheck3=false;
-                break;
-            }
-        }
-        System.out.println("yArr3:"+ycheck3);
-
-        //대각선 검사
-        for(int i=0;i<2;i++){
-            String tmp=dArr1[i];
-            if(tmp==dArr1[i+1]){
-                dcheck1=true;
-            }
-            else{
-                dcheck1=false;
-                break;
-            }
-        }
-        System.out.println("dArr1:"+dcheck1);
-
-        for(int i=0;i<2;i++){
-            String tmp=dArr2[i];
-            if(tmp==dArr2[i+1]){
-                dcheck2=true;
-            }
-            else{
-                dcheck2=false;
-                break;
-            }
-        }
-        System.out.println("dArr2:"+dcheck2);
-
-        if(xcheck1||xcheck2||xcheck3||ycheck1||ycheck2||ycheck3||dcheck1||dcheck2==true){
-            break;
-        }
         /*
         가로세로대각선 정보저장 출력
         System.out.println("xArr");
