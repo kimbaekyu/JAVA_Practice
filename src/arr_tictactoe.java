@@ -8,16 +8,32 @@ public class arr_tictactoe {
         int x,y,cnt=0;
 
         System.out.println("Tic Tac Toe GAME");
+
         //배열 초기화
         for(int i=0;i<3;i++){
             for(int j=0;j<3;j++)
             array[i][j]=' ';
         }
+
+        //현재상태 출력
+        System.out.println("=========<게임판 위치>===========");
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                if(j%3==0)
+                    System.out.printf("%n---------------------------------%n");
+                System.out.printf("[%d][%d]\t|\t",i,j);
+            }
+
+        }
+        System.out.println("\n");
+        System.out.println("\n===============================");
+        System.out.println("\n");
         //입력
         for(int i=0;i<3;i++){
             for(int j=0;j<3;j++){
+                System.out.println("위치를 입력해주세요.");
                 if(cnt%2==0){
-                    System.out.print("선공(O)차례입니다. ");
+                    System.out.print("-선공(O)차례입니다. ");
                     x=scanner.nextInt();
                     y=scanner.nextInt();
                     if(array[x][y]!=' '){
@@ -30,7 +46,7 @@ public class arr_tictactoe {
                 }
 
                 else{
-                    System.out.print("후공(X)차례입니다. ");
+                    System.out.print("-후공(X)차례입니다. ");
                     x=scanner.nextInt();
                     y=scanner.nextInt();
                     if(array[x][y]!=' '){
