@@ -7,7 +7,8 @@ public class arr_tictactoe {
         Scanner scanner=new Scanner(System.in);
         int x,y,cnt=0;
 
-        System.out.println("Tic Tac Toe GAME");
+        System.out.println("[Tic Tac Toe GAME]");
+        System.out.println("===========<주의사항>===========\n# 위치를 입력해주세요.");
 
         //배열 초기화
         for(int i=0;i<3;i++){
@@ -25,53 +26,76 @@ public class arr_tictactoe {
             }
 
         }
-        System.out.println("\n");
+
         System.out.println("\n===============================");
-        System.out.println("\n");
+        System.out.println("");
+
+        while(true){
         //입력
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                System.out.println("위치를 입력해주세요.");
-                if(cnt%2==0){
-                    System.out.print("-선공(O)차례입니다. ");
-                    x=scanner.nextInt();
-                    y=scanner.nextInt();
-                    if(array[x][y]!=' '){
-                        System.out.println("다른 자리를 선택해주세요.");
-                           cnt-=1;j-=1;
-                    }
-                    else
+
+            if(cnt==9){
+                System.out.println("========게임이 종료되었습니다.=============");
+                break;
+            }
+
+                    if(cnt%2==0){
+                        System.out.printf("<선공(O)차례입니다.> ");
+                        x=scanner.nextInt();
+                        y=scanner.nextInt();
+
+                        if(array[x][y]!=' '){
+                            System.out.println("다른 자리를 선택해주세요.");
+                        }
+                        else{
                            array[x][y]='o';
+                           cnt++;
 
-                }
+                            //출력부분
+                            for(int i=0;i<3;i++){
+                                for(int j=0;j<3;j++){
+                                    if(j%3==0)
+                                        System.out.printf("%n-----------%n");
+                                    System.out.printf("%c |\t",array[i][j]);
+                                }
 
-                else{
-                    System.out.print("-후공(X)차례입니다. ");
-                    x=scanner.nextInt();
-                    y=scanner.nextInt();
-                    if(array[x][y]!=' '){
-                        System.out.println("다른 자리를 선택해주세요.");
-                        cnt-=1;j-=1;
+                            }
+                            System.out.printf("\n");
+                        }
+                        System.out.printf("\n");
                     }
-                    else
-                        array[x][y]='x';
 
-                }
-            cnt++;
-            }
+                    else {
+                        System.out.printf("<후공(X)차례입니다.> ");
+                        x = scanner.nextInt();
+                        y = scanner.nextInt();
+
+                        if (array[x][y] != ' ') {
+                            System.out.println("다른 자리를 선택해주세요.");
+                        }
+                        else{
+                            array[x][y] = 'x';
+                            cnt++;
+                            //출력부분
+
+                            for(int i=0;i<3;i++){
+                                for(int j=0;j<3;j++){
+                                    if(j%3==0)
+                                        System.out.printf("%n-----------%n");
+                                    System.out.printf("%c |\t",array[i][j]);
+                                }
+
+                            }
+                            System.out.printf("\n");
+                        }
+                        System.out.printf("\n");
+                    }
+
+
+
+
         }
 
 
-        //출력부분
-        System.out.printf("%n");
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                if(j%3==0)
-                    System.out.printf("%n-----------%n");
-                System.out.printf("%c |\t",array[i][j]);
-            }
-
-        }
         //검사부분
         //가로
         for(int i=0;i<3;i++){
