@@ -1,3 +1,5 @@
+package TicTacToe;
+
 import java.util.Scanner;
 import java.util.Arrays;
 public class arr_tictactoe {
