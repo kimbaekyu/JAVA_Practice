@@ -15,5 +15,9 @@ public class Tv {
         System.out.println("CH DOWN");
         --channel;
     }
+    void print()  {
+        System.out.println("CH NOW: "+channel);
+
+    }
 
 }
